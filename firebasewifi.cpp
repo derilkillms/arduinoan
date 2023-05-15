@@ -38,7 +38,7 @@ void loop() {
     Firebase.setInt(firebaseData, path.c_str(), data.toInt());
     Firebase.setString(firebaseData, "/arduino/arduino_id", id.c_str());
     if (firebaseData.dataAvailable()) {
-      Serial.println(firebaseData.responseCode());
+     // Serial.println(firebaseData.responseCode());
       Serial.println(firebaseData.errorReason());
     }
     delay(10000);
